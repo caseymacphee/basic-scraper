@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import sys
 
 def fetch_search_results(query=None, minAsk=None, maxAsk=None, bedrooms=None):
+    ##find where all keys intersect ##
     search_params = {key: val for key, val in locals().items() if val is not None}
     if not search_params:
         raise ValueError("No valid keywords")
